@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import CodeCard from "./CodeCard";
 
-export default function SectionOne({ dict }: SectionOneProps) {
+export default function SectionOne({ dict, codeCard }: SectionOneProps) {
     return (
-        <motion.section variants={containerVariants} className="flex md:flex-row flex-col px-10 items-center h-screen w-screen" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
-            <motion.div className="flex flex-col gap-10 px-15 text-slate-900">
+        <motion.section variants={containerVariants} className="flex md:flex-row flex-col px-10 items-center h-screen max-w-screen" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
+            <motion.div className="flex flex-col gap-10 text-slate-900">
                 <motion.div className="flex flex-col gap-5">
                     <motion.h1 variants={itemVariants} className="text-5xl text-start font-bold">{dict.title}</motion.h1>
                     <motion.p variants={itemVariants} className="text-muted-foreground md:w-1/2 text-start">{dict.subtitle}</motion.p>
@@ -24,7 +24,7 @@ export default function SectionOne({ dict }: SectionOneProps) {
                 </motion.div>
             </motion.div>
             <motion.div className="pt-10">
-            <CodeCard />
+            <CodeCard dict={codeCard}/>
             </motion.div>
         </motion.section>
     )
