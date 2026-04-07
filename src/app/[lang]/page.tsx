@@ -2,6 +2,7 @@ import SectionOne from "@/components/SectionOne";
 import { AnimatePresence } from "framer-motion";
 import { getDictionary } from "@/dictionaries";
 import Header from "@/components/Header";
+import SectionTwo from "@/components/SectionTwo";
 
 export default async function Home({ params }: { params: Promise<{ lang: "en" | "pt" }> }) {
   const { lang } = await params;
@@ -11,7 +12,8 @@ export default async function Home({ params }: { params: Promise<{ lang: "en" | 
     <AnimatePresence>
       <Header key={"header"} dict={dict.header}/>
       <div className="flex flex-col items-center pt-30 md:pt-0">
-        <SectionOne key={"header"} dict={{ title: dict.sectionOne.title, subtitle: dict.sectionOne.subtitle, cta: dict.sectionOne.cta }} codeCard={dict.codeCard} />
+        <SectionOne key={"header"} dict={dict.sectionOne} codeCard={dict.codeCard} />
+        <SectionTwo dict={dict.sectionTwo}/>
       </div>
     </AnimatePresence>
   );
