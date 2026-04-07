@@ -11,6 +11,10 @@ export const en = {
         paragraphThree: "Understanding that solid engineering separates amateurs from professionals, I self-taught my way into the Java and Spring Boot ecosystem. I focused on high-reliability patterns, applying Clean Architecture, SOLID, and ACID principles, while ensuring system integrity through testing with JUnit 5 and Mockito.",
         paragraphFour: "Today, I move between the robustness of the backend and the fluidity of the modern frontend with Next.js and TypeScript. For me, Computer Science is the art of solving problems through elegant abstractions. Coming from a public school background and carving out my space through code, I’ve learned that luck is not an engineering factor."
     },
+    sectionThree: {
+      title: "Projects",
+      projects: []
+    },
     codeCard: {
         name: "name",
         local: "local",

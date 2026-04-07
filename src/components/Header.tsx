@@ -16,7 +16,7 @@ import { useState } from "react";
 export default function Header({ dict }: { dict: Header }) {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <motion.header variants={headerVariants} className="bg-secondary border-border border-2 w-screen max-w-screen py-5 fixed" initial="hidden" whileInView={"visible"} viewport={{ once: true, amount: 0.3 }}>
+        <motion.header variants={headerVariants} className="bg-secondary z-40 border-border border-2 w-screen max-w-screen py-5 fixed" initial="hidden" whileInView={"visible"} viewport={{ once: true, amount: 0.3 }}>
             <motion.div className="flex justify-between items-center px-10">
                 <motion.div variants={itemVariants}>
                     <p>{dict.name}</p>
