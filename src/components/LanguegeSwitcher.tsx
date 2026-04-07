@@ -16,7 +16,16 @@ export default function LanguageSwitcher() {
 
     return (
         <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.10 }}>
-            <Button variant={"outline"} className={"cursor-pointer"} onClick={() => toggleLanguage(pathName, router, newLanguage)}>{currentLanguege == "en" ? <span className="fi fi-br"></span> : <span className="fi fi-us"></span>}</Button>
+            <Button variant={"outline"} className={"cursor-pointer"} onClick={() => toggleLanguage(pathName, router, newLanguage)}>{currentLanguege == "en" ?
+                <div className="flex items-center gap-3">
+                    <span className="fi fi-br"></span>
+                    <span>Português</span>
+                </div>
+                : <div className="flex items-center gap-3">
+                    <span className="fi fi-us"></span>
+                    <span>English</span>
+                </div>
+            }</Button>
         </motion.div>
     )
 }

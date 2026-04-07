@@ -9,9 +9,12 @@ import { LiaLinkedin } from "react-icons/lia";
 import { SiGithub } from "react-icons/si";
 import LanguageSwitcher from "./LanguegeSwitcher";
 import { Button } from "./ui/button";
-import { Ellipse, Ellipsis } from "lucide-react";
+import { Ellipsis } from "lucide-react";
+import Menu from "./Menu";
+import { useState } from "react";
 
 export default function Header({ dict }: { dict: Header }) {
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
         <motion.header variants={headerVariants} className="bg-secondary border-border border-2 w-screen max-w-screen py-5 fixed" initial="hidden" whileInView={"visible"} viewport={{ once: true, amount: 0.3 }}>
             <motion.div className="flex justify-between items-center px-10">
@@ -38,11 +41,13 @@ export default function Header({ dict }: { dict: Header }) {
                 </nav>
                 <div className="md:hidden">
                     <motion.div whileTap={{ scale: 0.95 }} whileFocus={{ scale: 1.05 }}>
-                        <Button><Ellipsis /></Button>
+                        <Button onClick={() => setMenuOpen(!menuOpen)}><Ellipsis /></Button>
                     </motion.div>
-                    
                 </div>
             </motion.div>
+            {menuOpen &&
+                <Menu dict={dict} key={"menu"} />
+            }
         </motion.header>
     )
 }

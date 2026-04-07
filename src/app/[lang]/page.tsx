@@ -10,7 +10,7 @@ export default async function Home({ params }: { params: Promise<{ lang: "en" | 
   return (
     <AnimatePresence>
       <Header key={"header"} dict={dict.header}/>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center pt-30 md:pt-0">
         <SectionOne key={"header"} dict={{ title: dict.sectionOne.title, subtitle: dict.sectionOne.subtitle, cta: dict.sectionOne.cta }} codeCard={dict.codeCard} />
       </div>
     </AnimatePresence>
