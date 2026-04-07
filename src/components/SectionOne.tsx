@@ -8,7 +8,7 @@ import CodeCard from "./CodeCard";
 
 export default function SectionOne({ dict, codeCard }: SectionOneProps) {
     return (
-        <motion.section variants={containerVariants} className="flex md:flex-row flex-col px-10 items-center h-screen max-w-screen" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
+        <motion.section variants={containerVariants} className="flex md:flex-row flex-col py-20 px-10 md:h-screen items-center max-w-screen" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
             <motion.div className="flex flex-col gap-10 text-slate-900">
                 <motion.div className="flex flex-col gap-5">
                     <motion.h1 variants={itemVariants} className="text-5xl text-start font-bold">{dict.title}</motion.h1>
