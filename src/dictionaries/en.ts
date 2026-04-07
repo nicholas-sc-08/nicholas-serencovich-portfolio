@@ -257,6 +257,13 @@ export const en = {
             }
         ]
     },
+    sectionFour: {
+        title: "My Skills",
+        description: "My expertise is built on a foundation of Software Engineering and Clean Architecture. I specialize in developing high-performance backend systems with Java and Spring Boot, while crafting seamless, scalable user interfaces using Next.js and TypeScript. From containerization with Docker to rigorous testing with JUnit5, every tool in my stack is chosen to ensure reliability, security, and exceptional performance.",
+        groupSkillOne: "Infrastructure & Database:",
+        groupSkillTwo: "Back-End:",
+        groupSKillThree: "Front-End:"
+    },
     codeCard: {
         name: "name",
         local: "local",

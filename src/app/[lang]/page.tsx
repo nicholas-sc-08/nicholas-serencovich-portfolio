@@ -4,6 +4,7 @@ import { getDictionary } from "@/dictionaries";
 import Header from "@/components/Header";
 import SectionTwo from "@/components/SectionTwo";
 import SectionThree from "@/components/SectionThree";
+import SectionFour from "@/components/SectionFour";
 
 export default async function Home({ params }: { params: Promise<{ lang: "en" | "pt" }> }) {
   const { lang } = await params;
@@ -16,6 +17,7 @@ export default async function Home({ params }: { params: Promise<{ lang: "en" | 
         <SectionOne key={"header"} dict={dict.sectionOne} codeCard={dict.codeCard} />
         <SectionTwo dict={dict.sectionTwo}/>
         <SectionThree dict={dict.sectionThree}/>
+        <SectionFour dict={dict.sectionFour}/>
       </div>
     </AnimatePresence>
   );
