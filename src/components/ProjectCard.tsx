@@ -9,9 +9,9 @@ import Image from "next/image";
 
 export default function ProjectCard({ title, description, image, technologies }: ProjectCardProps) {
     return (
-        <motion.div variants={containerVariants} whileInView={"visible"} initial="hidden" viewport={{ once: true, amount: 0.3 }} whileHover={{ scale: 1.05 }} className="w-110">
+        <motion.div variants={containerVariants} whileInView={"visible"} initial="hidden" viewport={{ once: true, amount: 0.3 }} whileHover={{ scale: 1.05 }} className="full p-5">
             <Card className="object-cover">
-                <CardHeader className="relative w-full aspect-video overflow-hidden">
+                <CardHeader className="relative w-full aspect-video overflow-hidden flex items-center justify-center">
                     <motion.img variants={itemVariants} src={image} className="rounded-xl w-full h-full object-cover" />
                 </CardHeader>
                 <CardContent className="flex flex-col gap-5">

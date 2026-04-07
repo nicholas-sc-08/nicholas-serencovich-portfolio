@@ -114,7 +114,77 @@ export const pt = {
                 {
                     image: "icons/redux.svg",
                     alt: "redux"
+                },
+                {
+                    image: "/icons/shadcn.svg",
+                    alt: "shadcn"
+                },
+                {
+                    image: "/icons/tailwindcss.svg",
+                    alt: "tailwind"
+                },
+                {
+                    image: "/icons/java.svg",
+                    alt: "java"
+                },
+                {
+                    image: "/icons/spring.svg",
+                    alt: "spring"
+                },
+                {
+                    image: "/icons/maven.svg",
+                    alt: "maven"
+                },
+                {
+                    image: "/icons/junit.svg",
+                    alt: "junit"
+                },
+                {
+                    image: "/icons/docker.svg",
+                    alt: "docker"
+                },
+                {
+                    image: "/icons/kubernetes.svg",
+                    alt: "kubernetes"
+                },
+                {
+                    image: "/icons/jwt.svg",
+                    alt: "jwt"
                 }
+            ]
+        },
+        {
+            title: "Empreendimentos Catarinenses",
+            description: "Esta aplicação é um protótipo de sistema CRUD (Create, Read, Update, Delete) desenvolvido para apoiar a organização e manutenção de dados sobre o ecossistema empreendedor de Santa Catarina. A solução permite gerenciar informações cruciais sobre empresas e seus responsáveis, categorizando-as por segmentos de atuação e municípios do estado. O projeto foi construído com foco em alta disponibilidade, escalabilidade e manutenibilidade, utilizando uma arquitetura robusta baseada em camadas e seguindo as melhores práticas de desenvolvimento de software moderno.",
+            image: "/sctec.png",
+            technologies: [
+                {
+                    image: "/icons/java.svg"
+                }
+            ]
+        },
+        {
+            title: "Alextur Floripa",
+            description: "A Alextur Floripa redefine o conceito de transporte executivo, posicionando-se como o parceiro estratégico ideal para a sua empresa. Mais do que conectar pontos, nossa missão é oferecer uma extensão da excelência do seu negócio em cada trajeto. Especializados em transfers e traslados premium, aliamos uma frota moderna a uma equipe de profissionais rigorosamente selecionados. O resultado? Uma experiência de deslocamento pautada pela pontualidade britânica, segurança absoluta e o conforto necessário para que o seu único foco seja o sucesso. Com a Alextur, o transporte deixa de ser uma preocupação logística e se torna um diferencial competitivo para a sua marca.",
+            image: "/alextur.jpg",
+            technologies: [
+                {
+                    image: "/icons/vitejs.svg",
+                    alt: "vite"
+                },
+                {
+                    image: "/icons/react.svg",
+                    alt: "react"
+                },
+                {
+                    image: "/icons/javascript.svg",
+                    alt: "javascript"
+                },
+                {
+                    image: "/icons/css3.svg",
+                    alt: "css"
+                },
+
             ]
         }
         ]
