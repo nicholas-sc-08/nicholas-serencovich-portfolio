@@ -49,7 +49,9 @@ export default function SectionOne({ dict, codeCard }: SectionOneProps) {
                 </motion.div>
                 <div className="flex md:justify-start justify-center gap-8 mt-16 ">
                     {status.map((s, i) => (
-                        <StatusIcon key={i} title={s.title} value={s.value} type={s.type} />
+                        <motion.div key={i} whileHover={{scale: 1.05}}>
+                            <StatusIcon title={s.title} value={s.value} type={s.type} />
+                        </motion.div>
                     ))}
                 </div>
             </motion.div>
