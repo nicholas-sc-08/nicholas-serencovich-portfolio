@@ -11,10 +11,12 @@ import LanguageSwitcher from "./LanguegeSwitcher";
 import { Button } from "./ui/button";
 import { Ellipsis } from "lucide-react";
 import Menu from "./Menu";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import ThemeButton from "./ThemeButton";
 
 export default function Header({ dict }: { dict: Header }) {
     const [menuOpen, setMenuOpen] = useState(false);
+    const ref = useRef(null);
     return (
         <motion.header variants={headerVariants} className="bg-secondary z-40 border-border border-2 w-screen max-w-screen py-5 fixed" initial="hidden" whileInView={"visible"} viewport={{ once: true, amount: 0.3 }}>
             <motion.div className="flex justify-between items-center px-10">
@@ -24,7 +26,7 @@ export default function Header({ dict }: { dict: Header }) {
                 <nav className="hidden md:flex gap-5 items-center">
                     {dict.navLinks.map((link, i) => (
                         <motion.div key={i} variants={itemVariants}>
-                            <Link href={""} className="hover:text-primary transition-colors duration-300 font-semibold">{link}</Link>
+                            <Link href={`#${link.id}`} className="hover:text-primary transition-colors duration-300 font-semibold">{link.name}</Link>
                         </motion.div>
                     ))}
                     <div className="flex ml-5 items-center">
@@ -35,6 +37,9 @@ export default function Header({ dict }: { dict: Header }) {
                             <Link href={"https://www.linkedin.com/in/nicholas-s-carvalho/"} target="_blank"><LiaLinkedin size={35} /></Link>
                         </motion.div>
                     </div>
+                    <motion.div variants={itemVariants}>
+                        <ThemeButton />
+                    </motion.div>
                     <motion.div variants={itemVariants}>
                         <LanguageSwitcher />
                     </motion.div>

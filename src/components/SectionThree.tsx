@@ -8,7 +8,7 @@ import ProjectCard from "./ProjectCard";
 
 export default function SectionThree({ dict }: SectionThreeProps) {
     return (
-        <motion.section variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="w-full max-w-screen min-h-screen flex flex-col gap-10 py-20">
+        <motion.section id={dict.id} variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="w-full max-w-screen min-h-screen flex flex-col gap-10 py-20">
             <div className="px-10">
                 <motion.h2 variants={itemVariants} className="font-bold md:text-start text-center text-4xl">
                     {dict.title}

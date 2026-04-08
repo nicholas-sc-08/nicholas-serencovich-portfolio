@@ -1,5 +1,6 @@
 export interface SectionThreeProps {
     dict: {
+        id: string;
         title: string;
         projects: ProjectCardProps[]
     }

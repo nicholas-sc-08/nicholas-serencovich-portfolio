@@ -1,10 +1,15 @@
 export const en = {
     sectionOne: {
+        id: "hero",
         title: "Hello, I'm Nicholas S. Carvalho",
         subtitle: "Turning ideas into robust, scalable applications. Specialist in modern Next.js ecosystems and efficient Java Spring Boot architectures.",
-        cta: "Featured Projects"
+        ctaOne: "View Projects",
+        ctaTwo: "Contact me",
+        emailSubject: "Contat via Portifolio - [Your name]",
+        emailBody: "Hello Nicholas, I saw your portifolio and I would like to talk with you about one project."
     },
     sectionTwo: {
+        id: "aboutme",
         title: "A bit about my journey",
         paragraphOne: "My history with technology didn't start in a high-tech lab, but in Worcester (MA, USA), and was consolidated in the public school classrooms of Florianópolis. At 14, I had my first intellectual spark while observing the logic behind Chrome's 'Dino Game.' While many saw just a pastime, I saw a system of events and states. That’s when my purpose was born: I didn't just want to consume technology; I wanted to build it.",
         paragraphTwo: "In 2023, the Floripa Mais Tech project opened the doors to my first real contact with programming. I earned a full scholarship at SENAI in the 'Codificando o Futuro' (Coding the Future) cohort, where I dove deep into the Full Stack ecosystem. This dedication earned me the 'Student Reference' recognition and awards for Best Learning Situation and Best Project of 2025/1 with FLY, a sustainability-focused e-commerce platform.",
@@ -12,6 +17,7 @@ export const en = {
         paragraphFour: "Today, I move between the robustness of the backend and the fluidity of the modern frontend with Next.js and TypeScript. For me, Computer Science is the art of solving problems through elegant abstractions. Coming from a public school background and carving out my space through code, I’ve learned that luck is not an engineering factor."
     },
     sectionThree: {
+        id: "projects",
         title: "Projects",
         projects: [
             {
@@ -258,11 +264,24 @@ export const en = {
         ]
     },
     sectionFour: {
+        id: "stack",
         title: "My Skills",
         description: "My expertise is built on a foundation of Software Engineering and Clean Architecture. I specialize in developing high-performance backend systems with Java and Spring Boot, while crafting seamless, scalable user interfaces using Next.js and TypeScript. From containerization with Docker to rigorous testing with JUnit5, every tool in my stack is chosen to ensure reliability, security, and exceptional performance.",
         groupSkillOne: "Infrastructure & Database:",
         groupSkillTwo: "Back-End:",
         groupSKillThree: "Front-End:"
+    },
+    sectionFive: {
+        id: "expiriences",
+        title: "Experiences",
+        experiences: [
+            {
+                cargoName: "Jr. Full-Stack Developer",
+                companyName: "TRIDVO",
+                timeEmployed: "APRIL 2026 - NOW",
+                description: "Full-Stack Developer focused on building end-to-end solutions, from UI development to API architecture. Experienced in maintaining and debugging codebases, managing version control, and collaborating in agile environments through sprint planning and daily syncs."
+            }
+        ]
     },
     codeCard: {
         name: "name",
@@ -273,7 +292,37 @@ export const en = {
     },
     header: {
         name: "Nicholas",
-        navLinks: ["About me", "Projects"],
+        navLinks: [
+            {
+                id: "aboutme",
+                name: "About me"
+            },
+            {
+                id: "projects",
+                name: "Projects"
+            },
+            {
+                id: "stack",
+                name: "Stack"
+            }
+        ],
         language: "English",
+    },
+    footer: {
+        description: "Building scalable solutions with Java Spring Boot and modern Next.js ecosystems.",
+        navLinks: [
+            {
+                id: "aboutme",
+                name: "About me"
+            },
+            {
+                id: "projects",
+                name: "Projects"
+            },
+            {
+                id: "stack",
+                name: "Stack"
+            }
+        ]
     }
 }
