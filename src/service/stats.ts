@@ -15,8 +15,8 @@ export async function fetchGithubData() {
         const stars = repos.reduce((acc: number, repo: any) => acc + repo.stargazers_count, 0);
 
         return { prs: Number(prData.total_count) || 0, commits: Number(commitData.total_count) || 0, stars: Number(stars) || 0 };
-        } catch (error) {
-            console.error("Erro ao buscar GitHub:", error);
-            return { prs: 0, commits: 0 };
-        }
+    } catch (error) {
+        console.error("Erro ao buscar GitHub:", error);
+        return { prs: 0, commits: 0, stars: 0 };
     }
+}
