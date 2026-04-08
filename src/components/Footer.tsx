@@ -14,7 +14,7 @@ export default function Footer({ dict }: { dict: FooterProps }) {
         <motion.footer variants={containerVariants} initial="hidden" whileInView={"visible"} viewport={{ once: true, amount: 0.3 }} className="w-full pt-15 border-t border-border bg-background">
             <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="flex flex-col gap-2 md:text-start text-center">
-                    <div className="flex items-center justify-start">
+                    <div className="flex items-center md:justify-start justify-center">
                     <motion.img src="/NSLogo.png" variants={itemVariants} className="text-xl font-bold text-foreground w-20"/>
                     </div>
                     <motion.p variants={itemVariants} className="text-muted-foreground max-w-xs text-sm">{dict.description}</motion.p>
