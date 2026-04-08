@@ -1,5 +1,10 @@
 export interface Header {
     name: string;
-    navLinks: string[];
+    navLinks: NavLinks[];
     language: string;
+}
+
+export interface NavLinks {
+    id: string;
+    name: string;
 }

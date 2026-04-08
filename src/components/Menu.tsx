@@ -8,6 +8,7 @@ import Link from "next/link";
 import LanguageSwitcher from "./LanguegeSwitcher";
 import { LiaLinkedin } from "react-icons/lia";
 import { SiGithub } from "react-icons/si";
+import ThemeButton from "./ThemeButton";
 
 export default function Menu({ dict }: { dict: Header }) {
     return (
@@ -15,7 +16,7 @@ export default function Menu({ dict }: { dict: Header }) {
             <nav className="flex flex-col gap-5">
                 {dict.navLinks.map((link, i) => (
                     <motion.div key={i} variants={itemVariants}>
-                        <Link href={"/"} className="hover:text-primary transition-colors duration-300 font-semibold">{link}</Link>
+                        <Link href={`#${link.id}`} className="hover:text-primary transition-colors duration-300 font-semibold">{link.name}</Link>
                     </motion.div>
                 ))}
             </nav>
@@ -27,8 +28,9 @@ export default function Menu({ dict }: { dict: Header }) {
                     <Link href={"https://www.linkedin.com/in/nicholas-s-carvalho/"} target="_blank" className="flex items-center gap-1"><LiaLinkedin size={35} /> LinkedIn</Link>
                 </motion.div>
             </div>
-            <motion.div variants={itemVariants} className="flex justify-start">
+            <motion.div variants={itemVariants} className="flex justify-start gap-5">
                 <LanguageSwitcher />
+                <ThemeButton />
             </motion.div>
         </motion.div>
     )

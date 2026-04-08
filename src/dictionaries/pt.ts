@@ -1,12 +1,15 @@
-import { image } from "framer-motion/client";
-
 export const pt = {
     sectionOne: {
+        id: "hero",
         title: "Olá, sou o Nicholas S. Carvalho",
         subtitle: "Transformando ideias em aplicações robustas e escaláveis. Especialista em ecossistemas modernos com Next.js e arquiteturas eficientes em Java Spring Boot.",
-        cta: "Ver projetos"
+        ctaOne: "Ver Projetos",
+        ctaTwo: "Entrar em Contato",
+        emailSubject: "Contato via Portifólio - [Seu nome]",
+        emailBody: "Olá Nicholas, eu vi seu portifólio e gostaria de falar com você sobre um projeto."
     },
     sectionTwo: {
+        id: "sobremim",
         title: "Um pouco sobre minha jornada",
         paragraphOne: "Minha história com a tecnologia não começou em um laboratório de ponta, mas em Worcester (MA, EUA), e se consolidou nas salas de aula de escola pública em Florianópolis. Aos 14 anos, tive meu primeiro estalo intelectual ao observar a lógica por trás do 'Dino Game' do Chrome. Enquanto muitos viam apenas um passatempo, eu vi um sistema de eventos e estados. Ali nasceu meu propósito: eu não queria apenas consumir tecnologia, eu queria construí-la.",
         paragraphTwo: "Em 2023, o projeto Floripa Mais Tech abriu as portas para o meu primeiro contato real com programação. Conquistei uma bolsa integral no SENAI, na turma 'Codificando o Futuro', onde mergulhei no ecossistema Full Stack. Essa dedicação me rendeu o reconhecimento como Estudante Referência e os prêmios de Melhor Situação de Aprendizagem e Melhor Projeto de 2025/1 com o FLY, um e-commerce focado em sustentabilidade.",
@@ -14,6 +17,7 @@ export const pt = {
         paragraphFour: "Hoje, transito entre a robustez do backend e a fluidez do frontend moderno com Next.js e TypeScript. Para mim, a Ciência da Computação é a arte de resolver problemas através de abstrações elegantes. Vindo da escola pública e conquistando meu espaço através do código, aprendi que a sorte não é um fator de engenharia."
     },
     sectionThree: {
+        id: "projetos",
         title: "Projetos",
         projects: [{
             title: "Fly - Circular",
@@ -603,11 +607,24 @@ export const pt = {
         ]
     },
     sectionFour: {
+        id: "stack",
         title: "Minhas Habilidades",
         description: "Meus conhecimentos são construídos sobre uma base de Engenharia de Software e Clean Architecture. Sou especialista no desenvolvimento de sistemas de backend de alta performance com Java e Spring Boot, enquanto crio interfaces de usuário fluidas e escaláveis usando Next.js e TypeScript. Da conteinerização com Docker aos testes rigorosos com JUnit5, cada ferramenta em minha stack é escolhida para garantir confiabilidade, segurança e performance excepcional.",
         groupSkillOne: "Infraestrutura & Database:",
         groupSkillTwo: "Back-End:",
         groupSkillThree: "Front-End:"
+    },
+    sectionFive: {
+        id: "experiencias",
+        title: "Experiências",
+        experiences: [
+            {
+                cargoName: "Jr. Full-Stack Developee",
+                companyName: "TRIDVO",
+                timeEmployed: "ABRIL 2026 - ATÉ O MOMENTO",
+                description: "Trabalhando tanto no Front-End para o Desenvolvimento de Telas, quanto no Back-End para o desenvolvimento de API para a empresa. Focando também em manutenção e correção de erros, versionamento do código e participação de reuniões e planos de sprint."
+            }
+        ]
     },
     codeCard: {
         name: "nome",
@@ -618,7 +635,37 @@ export const pt = {
     },
     header: {
         name: "Nicholas",
-        navLinks: ["Sobre mim", "Projetos"],
+        navLinks: [
+            {
+                id: "sobremim",
+                name: "Sobre mim"
+            },
+            {
+                id: "projetos",
+                name: "Projetos"
+            },
+            {
+                id: "stack",
+                name: "Stack"
+            }
+        ],
         language: "Português",
+    },
+    footer: {
+        description: "Construindo soluções escaláveis com Java Spring Boot & ecossistemas modernos em Next.js.",
+        navLinks: [
+            {
+                id: "sobremim",
+                name: "Sobre mim"
+            },
+            {
+                id: "projetos",
+                name: "Projetos"
+            },
+            {
+                id: "stack",
+                name: "Stack"
+            }
+        ]
     }
 }

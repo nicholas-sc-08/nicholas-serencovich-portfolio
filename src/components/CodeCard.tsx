@@ -2,10 +2,11 @@
 
 import { itemVariants } from "@/shared/item-variants";
 import { motion } from "framer-motion";
+import type { CodeCard } from "@/shared/section-one";
 
 export default function CodeCard({ dict }: { dict: CodeCard }) {
     return (
-        <motion.div className="w-full max-w-[600px] md:aspect-video aspect-auto bg-slate-900 rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-700/50 p-5 font-mono text-sm leading-relaxed">
+        <motion.div className="w-full max-w-[600px] md:aspect-video aspect-auto bg-slate-900 rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-700/50 p-5 font-mono text-start text-sm leading-relaxed">
             <div className="flex gap-1.5 mb-5">
                 <motion.div variants={itemVariants} className="w-3 h-3 rounded-full bg-red-500" ></motion.div>
                 <motion.div variants={itemVariants} className="w-3 h-3 rounded-full bg-yellow-400"></motion.div>
