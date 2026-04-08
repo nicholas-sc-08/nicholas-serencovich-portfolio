@@ -14,12 +14,14 @@ export default function Footer({ dict }: { dict: FooterProps }) {
         <motion.footer variants={containerVariants} initial="hidden" whileInView={"visible"} viewport={{ once: true, amount: 0.3 }} className="w-full pt-15 border-t border-border bg-background">
             <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="flex flex-col gap-2 md:text-start text-center">
-                    <motion.h2 variants={itemVariants} className="text-xl font-bold text-foreground">Nicholas</motion.h2>
+                    <div className="flex items-center justify-start">
+                    <motion.img src="/NSLogo.png" variants={itemVariants} className="text-xl font-bold text-foreground w-20"/>
+                    </div>
                     <motion.p variants={itemVariants} className="text-muted-foreground max-w-xs text-sm">{dict.description}</motion.p>
                 </div>
                 <nav className="flex gap-6 text-sm font-medium text-muted-foreground">
                     {dict.navLinks.map((link, i) => (
-                        <motion.div variants={itemVariants}>
+                        <motion.div key={i} variants={itemVariants}>
                             <Link href={`#${link.id}`} className="hover:text-primary font-bold transition-colors ">{link.name}</Link>
                         </motion.div>
                     ))}
@@ -39,7 +41,7 @@ export default function Footer({ dict }: { dict: FooterProps }) {
                 </div>
             </div>
             <div className="flex items-center justify-center border-border border-t-2 py-10 mt-20">
-                <motion.p variants={itemVariants} className="text-xs text-center text-muted-foreground">© {currentYear} - Florianópolis, Brasil</motion.p>
+                <motion.p variants={itemVariants} className="text-xs text-center text-muted-foreground">© {currentYear} - Florianópolis, Brasil • Licensed under CC BY-NC-ND 4.0</motion.p>
             </div>
         </motion.footer>
     );

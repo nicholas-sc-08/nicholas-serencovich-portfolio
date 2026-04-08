@@ -19,6 +19,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Potifolio",
   description: "",
+  icons: {
+    icon: [
+      {
+        url: "/NSLlogo.png", // Caminho para o arquivo na pasta public
+        href: "/NSLogo.png",
+      },
+    ],
+    // Opcional: ícone para iPhone/iOS
+    apple: [
+      {
+        url: "/NSLogo.png",
+      },
+    ],
+  },
 };
 
 export default async function RootLayout({
@@ -33,7 +47,7 @@ export default async function RootLayout({
     <html suppressHydrationWarning lang={lang} className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}>
       <head />
       <body className="min-h-full flex flex-col">
-        <ThemeProvider attribute={"class"} defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute={"class"} defaultTheme={"light"} enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>
