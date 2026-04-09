@@ -27,7 +27,8 @@ export default function SectionOne({ dict, codeCard }: SectionOneProps) {
     const email = "nicholassc.2008@gmail.com";
     const subject = encodeURIComponent(dict.emailSubject);
     const body = encodeURIComponent(dict.emailBody);
-
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+    const mailtoUrl = `mailto:${email}?subject=${subject}&body=${body}`;
 
 
     return (
@@ -41,15 +42,22 @@ export default function SectionOne({ dict, codeCard }: SectionOneProps) {
                     <motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <Button className="cursor-pointer px-8 text-lg shadow shadow-primary/20" onClick={() => router.push(`https://github.com/nicholas-sc-08?tab=repositories`)} size={"lg"}><SiGithub />{dict.ctaOne}</Button>
                     </motion.div>
-                    <motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Link href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`} target="_blank">
+                    <motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="hidden md:block">
+                        <Link href={gmailUrl} target="_blank">
                             <Button variant="outline" className="cursor-pointer text-primary px-8 text-lg" size={"lg"}><SiGmail />{dict.ctaTwo}</Button>
                         </Link>
                     </motion.div>
+                    <div className="block md:hidden">
+                        <Link href={mailtoUrl}>
+                            <Button variant="secondary" className="cursor-pointer text-primary px-8 text-lg" size={"lg"}>
+                                <SiGmail />{dict.ctaTwo}
+                            </Button>
+                        </Link>
+                    </div>
                 </motion.div>
                 <div className="flex md:justify-start justify-center gap-8 mt-16 ">
                     {status.map((s, i) => (
-                        <motion.div key={i} whileHover={{scale: 1.05}}>
+                        <motion.div key={i} whileHover={{ scale: 1.05 }}>
                             <StatusIcon title={s.title} value={s.value} type={s.type} />
                         </motion.div>
                     ))}
